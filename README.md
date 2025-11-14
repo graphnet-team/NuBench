@@ -2,7 +2,9 @@
 
 This repository provides access to datasets, model predictions, and model artifacts for the NuBench dataset catalogue presented in [NuBench: An Open Benchmark for Deep Learning–Based Event Reconstruction in Neutrino Telescopes](https://arxiv.org/abs/XXXX.XXXXX). Datasets are available in two formats (SQLite and Parquet) - users may choose their preferred format. 
 
-![alt](./figures/geometry_birdseye.png)
+![alt](./figures/geometry_birdseye.png "Birds Eye View of Geometries")
+
+![alt](./figures/geometry.png "Side-view of Geometries")
 
 The catalogue contains seven datasets simulated across six distinct detector geometries that are inspired by, but not strictly identical to, existing or proposed neutrino telescopes.
 
@@ -36,3 +38,5 @@ Extract the contents of model artifacts and SQLite downloads using
 The contents of predictions and Parquet downloads should be extracted using
 
 `tar -xf filename.tar.gz`
+
+## Citation 
