@@ -1,1 +1,0 @@
-Details on training models presented in the paper using GraphNeT.
