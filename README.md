@@ -2,10 +2,11 @@
 
 This repository provides access to datasets, model predictions, and model artifacts for the NuBench dataset catalogue presented in [NuBench: An Open Benchmark for Deep Learning–Based Event Reconstruction in Neutrino Telescopes](https://arxiv.org/abs/XXXX.XXXXX). Datasets are available in two formats (SQLite and Parquet) - users may choose their preferred format. 
 
+---
 ![alt](./figures/geometry_birdseye.png "Birds Eye View of Geometries")
-
+---
 ![alt](./figures/geometry.png "Side-view of Geometries")
-
+---
 The catalogue contains seven datasets simulated across six distinct detector geometries that are inspired by, but not strictly identical to, existing or proposed neutrino telescopes.
 
 ## Available Datasets
@@ -15,7 +16,7 @@ The catalogue contains seven datasets simulated across six distinct detector geo
 | Flower L | [Download](https://sid.erda.dk/share_redirect/EJylHQXkBr) | [Download](https://sid.erda.dk/share_redirect/HBIS5alCHj) | [Download](https://sid.erda.dk/share_redirect/E0uj9YnZVZ) | [Download](https://sid.erda.dk/share_redirect/fklOMcPIyB) |
 | Flower S | [Download](https://sid.erda.dk/share_redirect/cUPqNKMRbQ) | [Download](https://sid.erda.dk/share_redirect/d08ELPHt2J) | [Download](https://sid.erda.dk/share_redirect/Ao3E9h8wLr) | [Download](https://sid.erda.dk/share_redirect/c5iAXJ5F8d) |
 | Flower XL | [Download](https://sid.erda.dk/share_redirect/foVpx81yBz) | [Download](https://sid.erda.dk/share_redirect/EjHdSveUxc) | [Download](https://sid.erda.dk/share_redirect/AOjybKOo2Q) | [Download](https://sid.erda.dk/share_redirect/cR2WNVmk4l) |
-| Hexagon | [Download](https://sid.erda.dk/share_redirect/GTf1gIlBbZ) | [Download](https://sid.erda.dk/share_redirect/GepbTY2MF4) | [Download](https://sid.erda.dk/share_redirect/A4hMrsbbl3) | Coming Soon |
+| Hexagon | [Download](https://sid.erda.dk/share_redirect/GTf1gIlBbZ) | [Download](https://sid.erda.dk/share_redirect/GepbTY2MF4) | [Download](https://sid.erda.dk/share_redirect/A4hMrsbbl3) | [Download](https://sid.erda.dk/share_redirect/BLx7Z17wQe) |
 | Hexagon Ice LE | [Download](https://sid.erda.dk/share_redirect/b9VHSF9X64) | [Download](https://sid.erda.dk/share_redirect/Cx2PVxHusa) | [Download](https://sid.erda.dk/share_redirect/hCIaEIm3sn) | [Download](https://sid.erda.dk/share_redirect/GpIDBKxAgV) |
 | Triangle | [Download](https://sid.erda.dk/share_redirect/ER3B0TlPqR) | [Download](https://sid.erda.dk/share_redirect/ediHXAsygn) | [Download](https://sid.erda.dk/share_redirect/DZFXwMcQmP) | [Download](https://sid.erda.dk/share_redirect/ctNHDFuzPN) |
 
