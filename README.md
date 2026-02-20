@@ -1,2 +1,5 @@
 # NuBench
-TBA
+
+Paper under review
+
+Download links and user guide TBA
