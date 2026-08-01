@@ -3,7 +3,7 @@
 // best model per metric as designated in the paper (incl. statistical ties).
 const NB = {
  "paper": "https://arxiv.org/abs/2511.13111",
- "repo": "https://github.com/sevmag/NuBench",
+ "repo": "https://github.com/graphnet-team/NuBench",
  "graphnet": "https://github.com/graphnet-team/graphnet",
  "modelOrder": [
   "particlenet",
