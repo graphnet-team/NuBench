@@ -1,5 +1,7 @@
 # NuBench
 
+**Website:** [sevmag.github.io/NuBench](https://sevmag.github.io/NuBench/) — interactive leaderboard, dataset downloads, and citation info.
+
 This repository provides access to datasets, model predictions, and model artifacts for the NuBench dataset catalogue presented in [NuBench: An Open Benchmark for Deep Learning–Based Event Reconstruction in Neutrino Telescopes](https://arxiv.org/pdf/2511.13111). Datasets are available in two formats (SQLite and Parquet) - users may choose their preferred format. 
 
 ---
