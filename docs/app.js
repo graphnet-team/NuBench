@@ -65,6 +65,31 @@ const TASKS = {
   },
 };
 
+/* Figures rendered from the paper's own PDFs (docs/assets/figures). An
+   artifact/preview build may define window.NB_FIG_SRC to swap in inlined
+   images instead of file paths. */
+const FIGURES = {
+  energy: [
+    { file: "energy_he", caption: "Energy reconstruction on the five full-range datasets, split into νμ CC and νμ NC events. The diagonal denotes ideal reconstruction; shaded bands span the 16th–84th percentile of the reconstructed energy." },
+    { file: "energy_le", caption: "Energy reconstruction on the two low-energy datasets, Flower S and Hexagon Ice LE." },
+  ],
+  direction: [
+    { file: "direction_he", caption: "Direction reconstruction on the five high-energy datasets: median opening angle as a function of neutrino energy, and the distribution of opening angles below 5°." },
+    { file: "direction_le", caption: "Direction reconstruction on the two low-energy datasets, Flower S and Hexagon Ice LE." },
+  ],
+  classification: [
+    { file: "tc_roc", caption: "ROC curves for track/cascade classification on the seven datasets." },
+    { file: "tc_scores", caption: "Distribution of classification scores on true track events — scores near 1 indicate confident track classification, scores near 0 confident cascade classification." },
+  ],
+  vertex: [
+    { file: "vertex_distance", caption: "Median Euclidean distance between true and reconstructed vertex as a function of neutrino energy (solid: νμ CC, dotted: νμ NC)." },
+    { file: "vertex_contours", caption: "Vertex error contours: markers show the median error, contours the 68% quantile. Smaller areas mean lower variance; centers close to zero mean less bias." },
+  ],
+  inelasticity: [
+    { file: "inelasticity", caption: "Reconstruction of visible inelasticity on the six water-based datasets." },
+  ],
+};
+
 const state = { task: "energy", dataset: {} };
 
 /* ---------- helpers ---------- */
@@ -402,6 +427,30 @@ function renderLeaderboard() {
       el("span", { class: "mono", style: "color:var(--best);font-weight:700" }, "highlighted"),
       " marks the best model per metric (including statistical ties). Uncertainties are one bootstrap standard deviation. — indicates the model was not evaluated.")
   );
+
+  renderFigures(state.task);
+}
+
+function renderFigures(taskKey) {
+  const panel = $("#figures-panel");
+  const figs = FIGURES[taskKey] || [];
+  const inlined = typeof window !== "undefined" && window.NB_FIG_SRC;
+  const grid = el("div", { class: "fig-grid" });
+  for (const f of figs) {
+    const src = inlined ? window.NB_FIG_SRC[f.file] : `assets/figures/${f.file}.png`;
+    const img = el("img", { src, alt: f.caption, loading: "lazy" });
+    // data: URIs can't be opened in a new tab, so only link real files
+    const frame = el("div", { class: "fig-frame" },
+      inlined ? img : el("a", { href: src, target: "_blank", rel: "noopener" }, img));
+    grid.append(el("figure", { class: "figure" }, frame,
+      el("figcaption", {}, f.caption)));
+  }
+  panel.replaceChildren(
+    el("div", { class: "panel-head" },
+      el("div", { class: "panel-title" }, "Figures from the paper"),
+      el("div", { class: "legend" },
+        el("span", { class: "item" }, "Model colors follow the paper's own scheme"))),
+    grid);
 }
 
 /* ---------- datasets ---------- */

@@ -446,6 +446,25 @@ table.results td.model {
 table.results td.model .dot { width: 9px; height: 9px; border-radius: 3px; flex: none; }
 .tbl-note { font-size: 0.8rem; color: var(--text-faint); margin-top: 12px; }
 
+/* paper figures */
+.fig-grid { display: grid; gap: 26px; }
+.figure { margin: 0; }
+.fig-frame {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+.fig-frame img { display: block; width: 100%; height: auto; }
+.fig-frame a { display: block; }
+.figure figcaption {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-top: 10px;
+  max-width: 900px;
+}
+
 /* ---------- datasets ---------- */
 
 .card-grid {
